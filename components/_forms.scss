@@ -1,0 +1,45 @@
+.grid__col--4{
+
+.headline--secondary{
+font-weight: bold;
+}
+
+
+.btn--default{
+display: block;
+background-color: $color-second;
+margin-top: 20px;
+margin-bottom: 60px;
+color: $white;
+@include button;
+width: 100%;
+font-weight: bold;
+}
+
+.form__input{
+width: 93%;
+border: none;
+border-bottom: 8px solid $color-first;
+padding-bottom: 10px;
+margin-left: 13px;
+font-family: $font-stack-primary;
+padding-left: 8px;
+font-size: 1em;
+}
+
+.form__input:nth-of-type(1){
+margin-bottom: 40px;
+}
+
+.form__label--hidden {
+  display: none;
+}
+
+.img--avatar{
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 40px;
+margin-top: 30px;
+}
+}

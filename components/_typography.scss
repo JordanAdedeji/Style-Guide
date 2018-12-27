@@ -1,0 +1,47 @@
+
+
+
+.grid__row .grid__col--8{
+margin-top: 80px;
+margin-bottom: 60px;
+
+.link{
+color: $color-second;
+text-decoration: none;
+
+}
+
+.blockquote{
+font-size: 20px;
+font-style: italic;
+border-left: 8px solid $color-first;
+padding-left: 13px;
+margin-right: 0;
+line-height: 25px;
+}
+}
+
+
+.headline--primary{
+padding-left: 30px;
+padding-bottom: 20px;
+color: $color-first;
+}
+
+@include mq(desktop){
+
+.grid__row:nth-of-type(3){
+@include flexbox;
+align-items: baseline;
+
+
+.grid__col--8{
+@include flex(4);
+}
+
+.grid__col--4{
+@include flex(2);
+margin-left: 100px;
+}
+}
+}

@@ -1,0 +1,161 @@
+.container{
+color: $color-text;
+@include center;
+font-family: $font-stack-primary;
+color: $color-text;
+}
+
+.headline--secondary:nth-of-type(5){
+margin-top: 50px;
+margin-bottom: 30px;
+}
+
+.grid__row:nth-of-type(n+6){
+@include flexbox;
+@include flex-direction(column);
+flex-wrap: wrap;
+margin-bottom: 30px;
+.theme__colors{
+text-align: left;
+padding: 10px 39px;
+border-radius: 5px;
+margin-bottom: 5px;
+}
+}
+
+
+.grid__row:nth-of-type(6){
+.theme__colors{
+background-color: adjust-hue( $color-third, 30% )
+}
+}
+
+.grid__row:nth-of-type(7){
+.theme__colors{
+background-color: darken( $color-second, 30% )
+}
+}
+
+.grid__row:nth-of-type(8){
+.theme__colors{
+background-color: lighten( $color-second, 10% )
+}
+}
+
+.grid__row:nth-of-type(9){
+.theme__colors{
+background-color: lighten( $color-sixth, 10% )
+}
+}
+
+.grid__row:nth-of-type(10){
+.grid__col--5{
+background-color: lighten( $color-third, 10% )
+}
+.grid__col--7{
+background-color: lighten( $color-fourth, 10% )
+}
+}
+
+.grid__row:nth-of-type(11){
+.grid__col--8{
+background-color: lighten( $color-fifth, 10% );
+margin-top: 0;
+}
+.grid__col--4{
+background-color: lighten( $color-second, 10% )
+}
+}
+
+.grid__row:nth-of-type(12){
+.centered{
+background-color: lighten( $color-fourth, 10% )
+}
+}
+
+@include mq(desktop){
+
+.grid__row:nth-of-type(n+6){
+.theme__colors{
+text-align: center;
+}
+}
+
+.grid__row:nth-of-type(6){
+
+.grid__col--12{
+margin: 5px;
+}
+}
+
+.grid__row:nth-of-type(7){
+@include flexbox;
+@include flex-direction(row);
+
+
+
+.grid__col--6{
+@include flex(1);
+margin: 5px;
+}
+}
+
+.grid__row:nth-of-type(8){
+@include flexbox;
+@include flex-direction(row);
+
+.grid__col--4{
+@include flex(1);
+margin: 5px;
+}
+}
+
+.grid__row:nth-of-type(9){
+@include flexbox;
+@include flex-direction(row);
+
+.grid__col--3{
+@include flex(1);
+margin: 5px;
+}
+}
+
+.grid__row:nth-of-type(10){
+@include flexbox;
+@include flex-direction(row);
+
+.grid__col--5{
+@include flex(2);
+margin: 5px;
+}
+.grid__col--7{
+@include flex(3);
+margin: 5px;
+}
+}
+
+.grid__row:nth-of-type(11){
+@include flexbox;
+@include flex-direction(row);
+
+.grid__col--8{
+@include flex(3);
+margin: 5px;
+}
+.grid__col--4{
+@include flex(2);
+margin: 5px;
+}
+}
+
+.grid__row:nth-of-type(12){
+@include flexbox;
+@include flex-direction(row);
+width: 60%;
+margin: 0 auto;
+
+.centered{
+@include flex(1);
+}
+}
+}

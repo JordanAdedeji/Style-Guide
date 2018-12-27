@@ -1,0 +1,43 @@
+//Mixins
+
+@mixin center{
+width: 80%;
+margin: auto auto;
+}
+@mixin button{
+  padding: 10px 39px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+
+
+@mixin mq($break){
+ @if $break == "mobile" {
+   @media (min-width: $break-small) and (max-width: $break-medium ){
+     @content;
+   }
+ }
+ @else if $break == "desktop" {
+   @media (min-width: $break-medium + 1){
+    @content;
+   }
+ }
+}
+
+@mixin flexbox {
+display: flex;
+}
+
+@mixin flex-direction($direction){
+ @if $direction == column {
+  flex-direction: column;
+ }
+ @else {
+  flex-direction: row;
+ }
+}
+
+@mixin flex($value){
+flex: $value;
+}

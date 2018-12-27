@@ -1,0 +1,58 @@
+.grid__row .grid__col--12 {
+@include flexbox;
+@include flex-direction(column);
+
+
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info{
+margin: 10px;
+@include button;
+color: $white;
+font-weight: bold;
+}
+
+.btn--default{
+background-color: $color-second;
+}
+
+.btn--success{
+background-color: $color-third;
+}
+.btn--error{
+background-color: $color-fourth
+}
+
+.btn--warning{
+background-color: $color-fifth;
+}
+
+.btn--info{
+background-color: $color-sixth;
+margin-bottom: 40px;
+}
+}
+
+
+@include mq(desktop){
+
+
+.grid__row .grid__col--12{
+@include flexbox;
+@include flex-direction(row);
+justify-content: space-around;
+margin-top: 60px;
+
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info{
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 30px;
+}
+}
+}
